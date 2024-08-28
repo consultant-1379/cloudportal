@@ -1,0 +1,25 @@
+<?php
+ $config = array(
+         //The values are taken from machine_types table in Yama database
+         'Yama' => array(
+                    'VAPP' => '/leases.json',
+                    'VAPP-Reset' => '/leases/reset_api.json',
+                    'CATVAPP' => '/leases/addhost.json',
+            ),
+          //vApps inside this DataCenters will not have Leases
+         'DCNoLease' => array(
+                    'CI-Execution-ASSURE',
+                    'CI-Execution-OSSRC',
+                    'CI-Execution-TOR',
+                    'CI-TE-Development'
+            ),
+         //vAppTemplates inside this Catalog will not have Leases
+         'CATNoLease' => array(
+                    'CI-Execution-ASSURE',
+                    'CI-Execution-OSSRC',
+                    'CI-Execution-TOR',
+                    'CI-TE-Development',
+                    'Master-Templates'
+            )
+    );
+?>

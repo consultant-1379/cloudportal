@@ -1,0 +1,38 @@
+<?php
+    $config = array (
+        'pooling_settings' => array (
+            'vapp_types' => array (
+                'SSGID' => 'Single Service Group Instance Deployment vApp installed with the latest ENM Baseline',
+                'FULL' => '4 SVC vApp installed with the latest ENM Baseline'
+            ),
+            'default_duration_hours' => 8,
+            'max_duration_hours' => 12,
+            'default_extension_time_hours' => 2,
+            'extension_limit' => 4,
+            'default_booking_limits' => ('limit_type' => 'OR' , 'vapp_types' => array('SSGID' => 2, 'FULL' => 1)),
+            'default_spin_up_hours' => 1,
+            'team_booking_limits' => array (
+                'TeamX' => ('limit_type' => 'AND' , 'vapp_types' => array('SSGID' => 2, 'FULL' => 2)),
+                'TeamY' => ('vapp_types' => array('FULL' => 1)),
+                'TeamZ' => ('vapp_types' => array('SSGID' => 2, 'FULL' => 3)),
+            ),
+            'jenkins_settings' => array (
+                'base_url' => 'https://femXXX-eiffelXXX.lmera.ericsson.se:8443/jenkins/',
+                'username' => 'theusername',
+                'password' => 'thepassword',
+                'job_name' => 'MakeSlaveBusy',
+                'SSGID_template_version_jobname' => 'ENM_Booking_Slave_Template_Monitor',
+                'FULL_template_version_jobname' => 'ENM_Booking_Full_Slave_Template_Monitor',
+                'slave_regexps' => array (
+                    'SSGID' => '(Jenkins_Booking-SSGID-POD-[A-Z]-Cluster[0-9]-ENM)|(Jenkins_SSGID-POD-[A-Z]-Cluster[0-9]-ENM-KGB)',
+                    'FULL' => '(Jenkins_Booking-FULL-POD-[A-Z]-Cluster[0-9]-ENM)|(Jenkins_FULL-POD-[A-Z]-Cluster[0-9]-ENM-KGB)'
+                 )
+            ),
+            'banner_settings' => array (
+                'flag' => false,
+                'text' => "There are NO SSGID vApps available in the pool"
+            )
+
+        )
+    );
+?>

@@ -1,0 +1,9 @@
+<?php
+	$config = array(
+		'vcli_settings' => array(
+			'hostname' => 'atvcliXXX',
+			'username' => 'root',
+			'password' => 'thepassword'
+		)
+	);
+?>

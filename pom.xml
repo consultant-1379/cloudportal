@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.ericsson.nms</groupId>
+    <artifactId>integration</artifactId>
+    <version>15.2.0.20</version>
+  </parent>
+
+  <groupId>com.ericsson.ci.cloud</groupId>
+  <artifactId>ERICcloudportal_CXP9030979</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+
+  <properties>
+    <cakephp_version>2.3.1</cakephp_version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack_cakephp</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.ericsson.3ppinternal</groupId>
+                  <artifactId>cakephp</artifactId>
+                  <version>${cakephp_version}</version>
+                  <type>zip</type>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/cakephp/</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>${basedir}</directory>
+        <targetPath>app</targetPath>
+        <excludes>
+          <exclude>target/</exclude>
+          <exclude>pom.xml</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>${project.build.directory}/cakephp/cakephp-${cakephp_version}</directory>
+      </resource>
+    </resources>
+  </build>
+</project>

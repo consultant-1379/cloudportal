@@ -1,0 +1,45 @@
+#running_tb_quota_text, #stored_tb_quota_text
+{
+    width:300px;
+    background-repeat: no-repeat;
+    text-align:center;
+    vertical-align:middle;
+    background-position:90% 50%;
+    display: inline-block;
+    padding:20px;
+}
+.status_ok
+{
+    background-image: url(/css/staticfiles/images/Vapps/tick.png);
+}
+
+.status_warning
+{
+    background-image: url(/css/staticfiles/images/Vapps/warning.png);
+}
+
+.status_error
+{
+    background-image: url(/css/staticfiles/images/Vapps/error_icon.png);
+}
+.align_div {
+    display: table-cell;
+    white-space:nowrap;
+    min-width:350px;
+}
+.progress_container {
+    min-width:300px;
+    display: inline-block;
+    padding-left:40px;
+}
+.progress {
+    position:relative;
+    margin:0px;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+}

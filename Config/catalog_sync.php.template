@@ -1,0 +1,22 @@
+<?php
+	$config = array(
+		'catalog_sync_definitions' => array (
+
+			// Add definitions of the catalogs to sync in the form below
+
+			// This specifies when vapps are added to the catalog mentioned, they are then deployed into the sync datacenters mentioned so subsequent deploys from that catalog will be faster.
+
+			// Example below when a vapp is added to the 'CI-Execution-X' catalog, its synced into the 'sync_X-Cluster1_CI-Execution-X,sync_X-Cluster4_CI-Execution-X,sync_X-Cluster5_CI-Execution-X datacenters
+
+
+			'CI-Execution-X' => array(
+				'sync_X-Cluster1_CI-Execution-X',
+				'sync_X-Cluster4_CI-Execution-X',
+				'sync_X-Cluster5_CI-Execution-X'
+			),
+			'CI-Execution-Y' => array(
+                                'sync_Y-Cluster1_CI-Execution-Y'
+                        )
+		)
+	);
+?>

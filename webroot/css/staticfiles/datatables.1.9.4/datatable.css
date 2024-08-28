@@ -1,0 +1,61 @@
+.odd {
+    background-color:#DADADA;
+}
+.even{
+    background-color:#E1E1E1;
+}
+table.dataTable tbody tr:hover {
+    background-color:#99CCFF;
+}
+table.dataTable tbody .row_selected{
+    background-color:#6699FF;
+}
+a:link {color:#369;}      /* unvisited link */
+a:visited {color:#369;}  /* visited link */
+a:hover {color:#333;}  /* mouse over link */
+a:active {color:#333;}  /* selected link */
+
+table.dataTable {
+    font-family: arial, verdana, sans-serif, clean;
+    font-size: 12px;
+    border-spacing:0px;
+    border-style:none;
+    color: black;
+}
+div.dataTables_info {
+    padding: 9px 6px 6px 6px;
+    float: left;
+}
+div.dataTables_filter{
+    padding: 9px 6px 6px 6px;
+    float: left;
+}
+table.datatable th {
+    padding: 5px;
+    border: 1px solid #fff;
+}
+
+table.datatable td, table.datatable th {
+    padding: 5px;
+}
+table.datatable thead th {
+    padding: 3px 18px 3px 10px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    color:#333;
+}
+table.datatable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin: 0 auto;
+    clear: both;
+    width: 100%;
+}
+

@@ -1,0 +1,28 @@
+#dateFilterDiv {
+  width: 250px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+}
+
+div.DTTT_container {
+    float:left;
+    text-align:center;
+}
+
+div.dataTables_filter {
+    position: relative;
+    float:right;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+div.dataTables_filter label {
+    padding-top: 0;
+    float:left;
+    height:30px;
+}
+
+

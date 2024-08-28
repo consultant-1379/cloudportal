@@ -1,0 +1,8 @@
+<?php
+    // Use this to define the hostname for the CI Portal
+    $config = array(
+        'ciportal' => array(
+            'url' => 'https://hostname/'
+        )
+    );
+?>

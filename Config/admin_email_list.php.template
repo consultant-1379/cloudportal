@@ -1,0 +1,7 @@
+<?php
+// Use this to define the email addresses of the administrators who will receive administrator emails
+$config = array(
+	'list' => array()
+);
+
+?>

@@ -1,0 +1,102 @@
+<?php
+    $config = array (
+        'pod_sync_definitions' => array (
+
+            // Add definitions of the catalogs to sync to other pods in the form below
+            // This specifies when vapps are added to the catalog mentioned, they are then copied to the destination pod
+            // Example below when a vapp is added to the 'CI-Execution-X' catalog, its synced into the 'CI-Execution-Y' catalog in the other two pods
+
+            'CI-Execution-X' => array(
+                'template_name_regex' => 'ENM_Ready.*',
+                'source_pod_settings' => array(
+                    'storage_hostname' => 'ieat3par-0X',
+                    'storage_username' => '3paruser',
+                    'storage_password' => '3parpass',
+                    'storage_volume_master' => 'RCFC_MASTER_0X',
+                    'datacenter_name' => 'Source_Datacenter'
+                ),
+                'destination_pod_settings' => array(
+                    array (
+                        'spp_url' => 'https://sppc.vts.com/',
+                        'spp_username' => 'Administrator',
+                        'spp_password' => 'admin01',
+                        'vcenter_datacenter' => 'POD-C',
+                        'vcenter_cluster' => 'POD-C-ClusterX',
+                        'datacenter_name' => 'Target_Datacenter',
+                        'catalog_name' => 'CI-Execution-Y',
+                        'datastore' => '3PAR_05-Cluster1-VV-RCFCX',
+                        'storage_hostname' => 'ieat3par-0Y',
+                        'storage_username' => '3paruser',
+                        'storage_password' => '3parpass',
+                        'storage_rcfc_target_name' => 'Target_3PAR-0X_0Y',
+                        'storage_rcfc_group_name' => 'RCSyncGrp-0X_0Y',
+                        'storage_rcfc_snap_volume' => 'RCFC_SNAP_TARG_0Y',
+                        'storage_rcfc_physical_volume' => 'RCFC_PHY_TARG_0Y'
+                    ),
+                    array (
+                        'spp_url' => 'https://sppd.vts.com/',
+                        'spp_username' => 'Administrator',
+                        'spp_password' => 'admin01',
+                        'vcenter_datacenter' => 'POD-D',
+                        'vcenter_cluster' => 'POD-D-ClusterX',
+                        'datacenter_name' => 'Target_Datacenter',
+                        'catalog_name' => 'CI-Execution-Y',
+                        'datastore' => '3PAR_05-Cluster1-VV-RCFCY',
+                        'storage_hostname' => 'ieat3par-0Y',
+                        'storage_username' => '3paruser',
+                        'storage_password' => '3parpass',
+                        'storage_rcfc_target_name' => 'Target_3PAR-0X_0Y',
+                        'storage_rcfc_group_name' => 'RCSyncGrp-0X_0Y',
+                        'storage_rcfc_snap_volume' => 'RCFC_SNAP_TARG_0Y',
+                        'storage_rcfc_physical_volume' => 'RCFC_PHY_TARG_0Y'
+                    )
+                )
+            ),
+            'CI-Execution-Z' => array(
+                'template_name_regex' => '.*',
+                'source_pod_settings' => array(
+                    'storage_hostname' => 'ieat3par-0X',
+                    'storage_username' => '3paruser',
+                    'storage_password' => '3parpass',
+                    'storage_volume_master' => 'RCFC_MASTER_0X'
+                ),
+                'destination_pod_settings' => array(
+                    array (
+                        'spp_url' => 'https://sppc.vts.com/',
+                        'spp_username' => 'Administrator',
+                        'spp_password' => 'admin01',
+                        'vcenter_datacenter' => 'POD-C',
+                        'vcenter_cluster' => 'POD-C-ClusterX',
+                        'datacenter_name' => 'Target_Datacenter',
+                        'catalog_name' => 'CI-Execution-A',
+                        'datastore' => '3PAR_05-Cluster1-VV-RCFCX',
+                        'storage_hostname' => 'ieat3par-0Y',
+                        'storage_username' => '3paruser',
+                        'storage_password' => '3parpass',
+                        'storage_rcfc_target_name' => 'Target_3PAR-0X_0Y',
+                        'storage_rcfc_group_name' => 'RCSyncGrp-0X_0Y',
+                        'storage_rcfc_snap_volume' => 'RCFC_SNAP_TARG_0Y',
+                        'storage_rcfc_physical_volume' => 'RCFC_PHY_TARG_0Y'
+                    ),
+                    array (
+                        'spp_url' => 'https://sppd.vts.com/',
+                        'spp_username' => 'Administrator',
+                        'spp_password' => 'admin01',
+                        'vcenter_datacenter' => 'POD-D',
+                        'vcenter_cluster' => 'POD-D-ClusterX',
+                        'datacenter_name' => 'Target_Datacenter',
+                        'catalog_name' => 'CI-Execution-A',
+                        'datastore' => '3PAR_05-Cluster1-VV-RCFCY',
+                        'storage_hostname' => 'ieat3par-0Y',
+                        'storage_username' => '3paruser',
+                        'storage_password' => '3parpass',
+                        'storage_rcfc_target_name' => 'Target_3PAR-0X_0Y',
+                        'storage_rcfc_group_name' => 'RCSyncGrp-0X_0Y',
+                        'storage_rcfc_snap_volume' => 'RCFC_SNAP_TARG_0Y',
+                        'storage_rcfc_physical_volume' => 'RCFC_PHY_TARG_0Y'
+                    )
+                )
+            )
+        )
+    );
+?>

@@ -1,0 +1,114 @@
+body {
+    margin:8px;
+}
+.checkbox input[type=checkbox] {
+    margin-left:0px;
+}
+hr {
+    border-style:inset;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+body, input, textarea, button, legend {
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    color: #333;
+}
+h1 {
+    color: #333;
+}
+ul, ol {
+    list-style: none;
+}
+.elogo {
+    float:left;
+    padding:15px;
+}
+.egrad {
+    width:100%;
+}
+.links {
+    padding-top:45px;
+}
+
+.links li {
+    float:left;
+    vertical-align:bottom;
+}
+.links li a{
+    font-family: arial, verdana, sans-serif, clean;
+    font-size: 12px;
+    text-decoration:none;
+    font-weight: bold;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    padding-top:15px;
+    width:80px;
+    height:30px;
+    color: #369;
+}
+.links li a:hover {
+    color: #333;
+}
+.links li a.linkselected {
+    color: #333;
+}
+#page
+{
+    margin: 0 auto;
+    min-width: 1330px;
+    padding-bottom:20px;
+}
+
+#page_header
+{
+    width:980px;
+    margin: 18px auto 0;
+    margin-bottom:18px;
+    float:left;
+}
+
+#main
+{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #666666;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 18px auto 0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+
+    background:white;
+}
+img {
+    border-style: none;
+}
+
+.flash_good {
+    background: #e5f2be;
+    border:2px solid #bedf5d;
+    padding:10px;
+    font-weight:bold;
+    margin:10px;
+}
+.flash_bad, #authMessage {
+    background: #eccecf;
+    border:2px solid #9e0b0f;
+    padding:10px;
+    font-weight:bold;
+    margin:10px;
+}
+
+.vapp_status.progress_spinner {
+     right: 0px;
+     display: inline-block;
+     width:100px;
+}
+.vapp_status_text {
+    display:inline-block;
+    margin-left:35px;
+    white-space: nowrap;
+}

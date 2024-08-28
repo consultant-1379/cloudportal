@@ -1,0 +1,11 @@
+<?php
+// Use this to define the username, password and hostname of vcloud director
+$config = array(
+	'VCD' => array(
+		'hostname' => 'atvcdX.athtem.eei.ericsson.se',
+		'username' => 'administrator@System',
+		'password' => 'passwordstring'
+	)
+);
+
+?>

@@ -1,0 +1,16 @@
+<?php
+// Use this to define the username and password for REST CALL
+ $config = array(
+    'rest_call' => array(
+        'username' => 'user',
+        'password' => 'pass',
+        'url' => 'url'
+    ),
+    'yama' => array(
+        'username' => 'user',
+        'password' => 'pass'
+    ),
+
+);
+
+?>
